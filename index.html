@@ -9,12 +9,7 @@
 <body>
     <nav>
         <h2>Pooja V</h2>
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul id="nav-links">
+        <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills ">Skills</a></li>
@@ -144,12 +139,6 @@
             e.preventDefault();
             emailjs.sendForm("service_tgjs6yt","template_8hvvk1m",this).then(() => {alert("Thanks! I'll get back to you soon");},() => {alert("Failed to send message");});
         });
-        const menutoggle = document.getElementById("menu-toggle");
-        const navLinks = document.getElementById("nav-links");
-        menutoggle.addEventListener("click",() =>
-    {
-        navLinks.classList.toggle("active");
-    });
     </script>
 </body>
 </html>
