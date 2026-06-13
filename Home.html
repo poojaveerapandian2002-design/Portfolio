@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Style sheet.css">
+</head>
+<body>
+    <nav>
+        <h2>Pooja V</h2>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills ">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav><br>
+    <section id="home">
+        <div class="hero">
+         <div class="hero-img">
+            <img src="Profile.jpg.jpeg" alt="portfolio">
+        </div>
+        <div class="mainpart">
+        <h3>Hello,I'm</h3>
+        <h1>Pooja V</h1>
+        <h3>Aspiring Full Stack Developer & UI/UX Designer</h3>
+        <p>Motivated fresher skilled in HTML, CSS, JavaScript, Python, MySQL and Figma.
+           Passionate about building responsive web application and continuously learning new technologies.</p>
+        <div class="button-container"> 
+        <a href="#projects"><button class="btn">View Projects</button></a>
+        <a href="#contact"><button class="btn">Hire Me</button></a>
+        <a href="Resume.pdf.pdf" download><button class="btn">Download Resume</button></a>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section id="about" class="About">
+        <h1>About Me</h1>
+        <p>Motivated and detail-oriented fresher with skills in Python, MySQL, and web development(HTML, CSS, JavaScript UI/UX). <br>
+         Experienced in building basic full stack projects, including automation scripts and database-driven application. <br>
+         Strong problem-solving ability with a keen interest in backend and full stack development. <br>
+         Eager to start a career as a Full Stack Developer.
+        </p>
+    </section>
+    <section id="skills" class="skills-section">
+        <h1>My Skills</h1>
+        <div class="skills-container">
+        <div class="card">
+            <img src="HTML and CSS.png" width="60px" height="60px" alt="Html & CSS">
+            <h3>HTML & CSS</h3>
+            <p>Semantic HTML, Forms, Table,Flexbox, Grid, Media Queries, Positioning</p>
+        </div>
+        <div class="card">
+            <img src="JavaScript.png" width="60px" height="60px" alt="JavaScript">
+            <h3>JavaScript</h3>
+            <p>DOM Manipulation, Event Handling, Functions Arrays, Basic ES6 Concepts</p>
+        </div>
+        <div class="card">
+            <img src="Python.png" width="60px" height="60px" alt="Python">
+            <h3>Python</h3>
+            <p>OOP Concepts, File Handling, API Basics, Exception Handling</p>
+        </div>
+        <div class="card">
+            <img src="MySQL.png" width="60px" height="60" alt="My SQL">
+            <h3>MySQL</h3>
+            <p>CRUD Operations, Joins, Aggregate Functions
+            </p>
+        </div>
+        <div class="card">
+            <img src="Figma.png" width="60px" height="60px" alt="Figma">
+            <h3>Figma</h3>
+            <p>Wireframing & Prototyping,
+                UI/UX Design,
+                Responsive Design,
+                Color Theory
+            </p>
+        </div>
+        </div>
+    </section>
+    <section id="projects" class="project-section">
+        <h1>My Projects</h1>
+        <div class="project-container">
+        <div class="card">
+            <h3>Bank Management System (Python + MySQL)</h3>
+            <p><ul>
+            <li>Developed a Bank Management System using Python and MySQL</li>
+            <li>Implemented customer and account management features.</li>
+            <li>Integrated MySQL database using SQL queries.</li></ul>
+            </p>
+        </div>
+        <div class="card">
+            <h3>Personal Portfolio Websit (HTML,CSS,JavaScript)</h3>
+            <p><ul>
+            <li>Developed a responsive personal portfolio website using HTML,CSS and JavaScript</li>
+            <li>Showcased skills,project and contact details.</li>
+            <li>Implemented mobile friendly navigation.</li></ul>
+            </p>
+        </div>
+        <div class="card">
+            <h3>File Organizer (Python)</h3>
+            <p><ul>
+            <li>Developed a File Organizer using Python.</li>
+            <li>Automated file sorting based on file types.</li>
+            <li>Improved file management and Organization.</li></ul>
+            </p>
+        </div>
+        <div class="card">
+            <h3>Music Streaming App UI (Figma)</h3>
+            <p><ul>
+            <li>Designed a Music Streaming App using Figma.</li>
+            <li>Created user friendly screens for music browsing.</li>
+            <li>Focused on simple navigation and user experience.</li></ul>
+            </p>
+        </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required><br>
+        <input type="email" name="from_email" placeholder="Your Email"><br>
+        <textarea rows="5" name="message" placeholder="Your Message"></textarea><br>
+        <button class="btn">Send Message</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/pooja-veerapandian-3193a228a" target="_blank">
+                <img src="LinkedIn.avif" alt="Linkedin">
+            </a>
+        </div>
+    </section>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("DZtGebrlRN_Kz5y4I");
+        })();
+        document.getElementById("contact-form").addEventListener("submit",function(e){
+            e.preventDefault();
+            emailjs.sendForm("service_tgjs6yt","template_8hvvk1m",this).then(() => {alert("Thanks! I'll get back to you soon");},() => {alert("Failed to send message");});
+        });
+        const menutoggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+        menutoggle.addEventListener("click",() =>
+    {
+        navLinks.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>
