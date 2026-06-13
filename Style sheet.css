@@ -13,24 +13,10 @@ body{
     color: white;
     overflow-x: hidden;
 }
-.menu-toggle{
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-.menu-toggle span{
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-}
 nav{
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    align-items: center;
     background: rgba(0,0,0,0.3);
 }
 nav ul{
@@ -48,62 +34,26 @@ nav a{
 nav a:hover{
     color: #00e0ff;
 }
-@media screen and (max-width: 768px){
-.menu-toggle{
-    display: block;
-}
-nav ul{
-    display: none;
-    flex-direction: column;
-}
-nav ul.active{
-    display: flex;
-}
-}
-@media screen and (max-width: 768px) {
 .hero{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    padding: 80px 200px;
 }
 .hero-img img{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    max-width: 100%;
+    border-radius: 50%;
+    width: 250px;
 }
 section{    
     padding: 10px 50px;
     text-align: center;
 }
 .mainpart{
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-}
-.mainpart h1,
-.mainpart h3,
-.mainpart p{
-    text-align: center;
+    margin-left: 80px;
 }
 h1{
-    font-size: 32px;
-}
-h3{
-    font-size: 20px;
-}
-p{
-    font-size: 20px;
-    line-height: 1.5;
-}
-.mainpart p{
-    text-align: center;
-}
-.mainpart{
-    text-align: center;
-    width: 100%;
-}
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 .button-container{
     display: flex;
@@ -123,12 +73,6 @@ p{
     text-decoration: none;
     display: inline-block;
 }
-.skills-container{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
 @media (max-width: 768px){
     .button-container{
          flex-direction: column;
@@ -138,19 +82,16 @@ p{
         width: 80px;
         text-align: center;
     }
-    .skills-container{
-    flex-direction: column;
-    align-items: center;
-}
-.card{
-    width: 90%;
-    max-width: 250px;
-    margin: 0 auto;
-}
 }
 .skills-section{
     text-align: center;
     padding: 80px 20px;
+}
+.skills-container{
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    gap: 50px;
 }
 .card{
     background: rgba(255,255,255,0.1);
@@ -181,12 +122,16 @@ p{
      text-align: center;
     padding: 80px 20px;
 }
-@media (max-width: 768px) {
 .project-container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 50px auto;
+    justify-content: center;
+    gap: 50px;
 }
+@media (max-width: 768px){
+    .project-container{
+         flex-direction: column;
+    }
 }
 .About p{
     line-height: 1.6;
